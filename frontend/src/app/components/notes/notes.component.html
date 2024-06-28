@@ -1,0 +1,13 @@
+
+
+<div class="main">
+   <div class="top">
+    <button routerLink="user" type="submit">&lt; </button>
+    <input  [(ngModel)]="title" type="text" placeholder="Title">
+   </div>
+   
+    <textarea [(ngModel)]="content " rows="50" autofocus placeholder="Enter text here"> </textarea>
+    <button class="save
+    " style="color: aliceblue;" (click)="saveNote()">{{ noteIndex !== null ? 'Update Note' : 'Save' }}</button>
+</div>
+  

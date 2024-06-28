@@ -1,0 +1,50 @@
+<!-- <app-navbar></app-navbar> -->
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  
+<div class="main">
+    <div class="top">
+        <i class="fa-solid fa-notebook"></i>Notebook 
+        <div class="search-container">
+            <input type="text" placeholder="Search notes">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+
+    <div class="create" style="display: flex; padding: 10px;gap: 70px;">
+        <button routerLink="/notes">
+            <i class="fas fa-pencil-alt"></i>
+        </button>
+        <div class="say">
+            <h3>All notes</h3>
+        </div>
+    </div>
+    <div class="mid">
+        
+            <div class="all" >
+                <div *ngFor="let note of notes ;let i = index"  class="display" >
+
+                    <div class="juu">
+                        
+                        <button (click)="deleteNote(i)" class="delete">
+                        <i class="fas fa-trash"></i> 
+                       </button>
+                       <h2 (click)="editNote(i)">Title: {{note.title}}</h2>
+                    </div>
+                    
+                    <p (click)="editNote(i)">{{note.content}}</p>
+                   
+                </div>
+            </div>
+            
+            
+           
+        
+        
+    </div>
+    <div class="bott">
+
+    </div>
+   
+</div>

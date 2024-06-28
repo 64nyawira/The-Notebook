@@ -1,0 +1,6 @@
+.home {
+    color: black;
+}
+.bttns .home:hover {
+    background-color: #e0a800;
+}
